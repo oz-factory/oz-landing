@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  background-color: #fff9e5;
+  font-family: "Do Hyeon", "Nanum Myeongjo", sans-serif;
+  color: #4b3f28;
+}
+header.site-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  background: #fef4d1;
+  position: relative;
+}
+.cherry {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+}
+h1 {
+  font-size: 3rem;
+  color: #cc8800;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #7c6846;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background: #fcecc5;
+  border-top: 2px solid #d9c197;
+  border-bottom: 2px solid #d9c197;
+}
+.menu div {
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+main {
+  padding: 1.5rem;
+  display: grid;
+  gap: 2rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee4cc;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+  }
+  .menu div {
+    margin-bottom: 1rem;
+  }
+}
