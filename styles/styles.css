@@ -10,6 +10,9 @@ header.site-header {
   background: #fef4d1;
   position: relative;
 }
+.icon-large {
+  font-size: 3rem; /* 필요에 따라 2rem ~ 5rem 조절 가능 */
+}
 .cherry {
   position: absolute;
   top: 0;
@@ -48,11 +51,29 @@ footer {
   background: #eee4cc;
   font-size: 0.9rem;
 }
+iframe {
+  max-width: 800px;
+  height: 450px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+#gag img {
+  width: 200px;
+  margin: 0.5rem;
+}
 @media screen and (max-width: 600px) {
   .menu {
     flex-direction: column;
   }
   .menu div {
     margin-bottom: 1rem;
+  }
+  iframe {
+    height: 250px;
+  }
+  #gag img {
+    width: 100%;
+    max-width: 300px;
   }
 }
