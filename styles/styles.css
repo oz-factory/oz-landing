@@ -117,21 +117,42 @@ iframe {
   }
 }
 
-.fortune-section {
-  text-align: center;
-  background: #fff4d5;
+.fortune-quiz-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 2rem;
   padding: 2rem;
-  margin: 2rem auto;
+  background: #fdf5e6;
+  flex-wrap: wrap; /* 모바일 대응 */
+}
+
+.fortune-box,
+.quiz-box {
+  flex: 1 1 400px;
+  background: #fffaf0;
   border-radius: 16px;
+  padding: 2rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   font-size: 1.3rem;
 }
-.fortune-section button {
-  font-size: 1.5rem;
+
+.fortune-box button,
+.quiz-box button {
+  font-size: 1.3rem;
   padding: 0.8rem 1.5rem;
   background: #ffcc66;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 1rem;
+}
+
+.quiz-box input {
+  font-size: 1.2rem;
+  padding: 0.6rem;
+  width: 80%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
   margin-top: 1rem;
 }

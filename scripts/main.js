@@ -50,3 +50,36 @@ function showFortune() {
   )}`;
   document.getElementById("fortuneText").innerHTML = result;
 }
+
+const quizData = [
+  { question: "옛날 전화기에 달려 있던 원형 부품은?", answer: "다이얼" },
+  { question: "밥을 담는 그릇, 자그마한 공기?", answer: "공기" },
+  { question: "가장 가까운 가족, 피를 나눈 사람들?", answer: "가족" },
+  { question: "추억의 음악을 들을 수 있는 장소?", answer: "주크박스" },
+];
+
+let currentQuiz;
+
+function loadQuiz() {
+  currentQuiz = quizData[Math.floor(Math.random() * quizData.length)];
+  document.getElementById("quizQuestion").textContent = currentQuiz.question;
+  document.getElementById("quizAnswer").value = "";
+  document.getElementById("quizResult").textContent = "";
+}
+
+function checkQuizAnswer() {
+  const userAnswer = document.getElementById("quizAnswer").value.trim();
+  const resultEl = document.getElementById("quizResult");
+
+  if (userAnswer === currentQuiz.answer) {
+    resultEl.textContent = "🎉 정답입니다!";
+    resultEl.style.color = "green";
+  } else {
+    resultEl.textContent = "❌ 아쉽지만 오답입니다. 다시 시도해보세요.";
+    resultEl.style.color = "red";
+  }
+}
+
+window.onload = function () {
+  loadQuiz();
+};
