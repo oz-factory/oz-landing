@@ -27,3 +27,26 @@ gag.innerHTML = `
   <img src="./assets/images/gag1.png" width="120" alt="짤1" />
   <img src="./assets/images/gag2.png" width="120" alt="짤2" />
 `;
+
+// scripts/main.js 에 추가
+function showFortune() {
+  const fortunes = [
+    "따뜻한 차 한 잔과 함께 여유를 가져보세요.",
+    "오늘은 오랜 친구와 연락해보면 좋겠어요!",
+    "작은 웃음이 큰 복이 되어 돌아올 거예요.",
+    "밖에 나가 햇살을 쬐면 좋은 일이 생깁니다.",
+    "걱정하지 마세요. 당신 편이 많습니다.",
+    "오늘은 쉬어가도 괜찮아요. 그럴 자격 있습니다.",
+  ];
+
+  const luckyNumbers = Array.from({ length: 3 }, () =>
+    Math.floor(Math.random() * 45 + 1)
+  );
+
+  const selectedFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+
+  const result = `${selectedFortune} 🍀<br><strong>행운 숫자:</strong> ${luckyNumbers.join(
+    ", "
+  )}`;
+  document.getElementById("fortuneText").innerHTML = result;
+}

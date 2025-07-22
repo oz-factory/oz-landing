@@ -3,77 +3,135 @@ body {
   background-color: #fff9e5;
   font-family: "Do Hyeon", "Nanum Myeongjo", sans-serif;
   color: #4b3f28;
+  font-size: 20px; /* ✔ 본문 기본 글자 확대 */
+  line-height: 1.8;
 }
+
 header.site-header {
   text-align: center;
-  padding: 2rem 1rem 1rem;
+  padding: 4rem 2rem 2rem;
   background: #fef4d1;
   position: relative;
 }
-.icon-large {
-  font-size: 3rem; /* 필요에 따라 2rem ~ 5rem 조절 가능 */
-}
+
 .cherry {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80px;
+  width: 100px;
 }
+
 h1 {
-  font-size: 3rem;
+  font-size: 4rem; /* ✔ 약 64px */
   color: #cc8800;
+  margin-bottom: 0.5rem;
 }
+
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #7c6846;
 }
+
+.icon-large {
+  font-size: 5rem; /* ✔ 이모지 크게 */
+}
+
 .menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 1rem;
+  gap: 1.5rem;
+  padding: 2rem;
   background: #fcecc5;
-  border-top: 2px solid #d9c197;
-  border-bottom: 2px solid #d9c197;
+  border-top: 3px solid #d9c197;
+  border-bottom: 3px solid #d9c197;
 }
+
 .menu div {
   text-align: center;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-main {
+  font-size: 1.8rem;
   padding: 1.5rem;
-  display: grid;
-  gap: 2rem;
+  background: #fff4d2;
+  border-radius: 16px;
+  min-width: 150px;
+  min-height: 80px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
 }
+
+.menu div:hover {
+  transform: scale(1.05);
+}
+
+main {
+  padding: 3rem;
+  display: grid;
+  gap: 3rem;
+}
+
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background: #eee4cc;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
+
 iframe {
-  max-width: 800px;
-  height: 450px;
+  max-width: 960px;
+  height: 520px;
   width: 100%;
   display: block;
   margin: 0 auto;
 }
+
 #gag img {
-  width: 200px;
-  margin: 0.5rem;
+  width: 260px;
+  margin: 1rem;
 }
+
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 22px; /* ✔ 모바일에서 더 크게 */
+  }
+
   .menu {
     flex-direction: column;
+    align-items: center;
   }
+
   .menu div {
-    margin-bottom: 1rem;
+    width: 90%;
+    font-size: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
   }
+
   iframe {
-    height: 250px;
+    height: 280px;
   }
+
   #gag img {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
   }
+}
+
+.fortune-section {
+  text-align: center;
+  background: #fff4d5;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  font-size: 1.3rem;
+}
+.fortune-section button {
+  font-size: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #ffcc66;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
 }
