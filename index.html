@@ -36,22 +36,32 @@
       </div>
     </nav>
 
-    <!-- 운세와 퀴즈를 나란히 감싸는 섹션 -->
-    <section class="fortune-quiz-wrapper">
+    <section class="feature-row">
       <!-- 운세 -->
-      <div class="fortune-box">
-        <h2>🌟 오늘의 탑골 운세</h2>
+      <div class="feature-box">
+        <h2>🌟 오늘의 운세</h2>
         <button onclick="showFortune()">운세 뽑기</button>
         <p id="fortuneText">오늘의 운세가 여기에 표시됩니다.</p>
       </div>
 
-      <!-- 퀴즈 -->
-      <div class="quiz-box">
+      <!-- 낱말 퀴즈 -->
+      <div class="feature-box">
         <h2>🧠 오늘의 낱말 퀴즈</h2>
         <p id="quizQuestion">문제가 여기에 나옵니다.</p>
         <input type="text" id="quizAnswer" placeholder="정답을 입력하세요" />
         <button onclick="checkQuizAnswer()">정답 확인</button>
         <p id="quizResult"></p>
+      </div>
+
+      <!-- 추억의 우체통 -->
+      <div class="feature-box">
+        <h2>💌 추억의 우체통</h2>
+        <img
+          src="./assets/images/mailbox.png"
+          alt="우체통 이미지"
+          class="mailbox-image"
+        />
+        <p>누군가에게 마음을 전해보세요.</p>
       </div>
     </section>
 
